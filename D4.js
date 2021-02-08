@@ -20,7 +20,7 @@ console.log("area of rectangle is ",area(2,3));
 
 
 /* EXERCISE 2
-Write a function "crazySum" which receives two integers. It should return the sum of those two values, but if the two values are the same then it should return their sum multiplied by 3.
+Write a function "cffrazySum" which receives two integers. It should return the sum of those two values, but if the two values are the same then it should return their sum multiplied by 3.
 */
 const crazySum = function(x1,x2){
     if(x1===x2)
