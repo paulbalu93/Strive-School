@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet" />
+
+		<title>Quiz BENCHMARK</title>
+	</head>
+
+	<body>
+		<style>
+			body {
+				display: block;
+				align-items: center;
+				background: linear-gradient(to top, #22c1c3 0%, #fdbb2d 74%);
+				margin: 0;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				text-align: center;
+				font-size: 20px;
+				font-family: 'Roboto', sans-serif;
+			}
+			h1 {
+				background: linear-gradient(315deg, #f8ef42 0%, #057228 74%);
+				-webkit-background-clip: text;
+				background-clip: text;
+				color: transparent;
+				animation: rainbow_animation 5s ease-in-out infinite;
+				background-size: 400% 100%;
+				padding: 70px 0;
+				font-size: 50px;
+				font-family: 'Sansita Swashed', cursive;
+			}
+			@keyframes rainbow_animation {
+				0%,
+				100% {
+					background-position: 0 0;
+				}
+
+				50% {
+					background-position: 100% 0;
+				}
+			}
+			#startpage {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: auto;
+			}
+			#endpage {
+				display: none;
+			}
+			form {
+				width: max-content;
+				height: 600px;
+				display: none;
+				margin: 100px auto;
+			}
+			input[type='radio'] {
+				margin-left: 80px;
+				float: left;
+			}
+			label {
+				float: left;
+			}
+
+			input {
+				text-decoration: none;
+
+				padding: 6px 16px;
+			}
+			span {
+				float: left;
+				margin-left: 40px;
+			}
+
+			.button {
+				background-color: #f1f1f1;
+				color: black;
+				border: transparent;
+				box-shadow: 7px 7px 5px #166d3b;
+				border-radius: 5px;
+				margin: 50px 50px 50px 50px;
+				padding: 10px 24px;
+			}
+
+			#previous {
+				background-color: #f1f1f1;
+				color: black;
+				border-radius: 5px;
+				border: transparent;
+				float: left;
+				margin: 50px 50px 50px 50px;
+			}
+
+			#next {
+				background-color: #166d3b;
+				border: transparent;
+				color: white;
+				border-radius: 5px;
+				float: right;
+				margin: 50px 50px 50px 50px;
+			}
+		</style>
+		<div id="startpage">
+			<h1>WELCOME TO THE QUIZ</h1>
+			<input type="button" class="button" value="Start" onclick="quiz()" />
+		</div>
+		<div class="questions">
+			<form class="quiz" action="">
+				<span>1. What is 9+9?</span><br />
+				<input type="radio" name="ex1" class="choice" value="1" />
+				<label>0</label><br />
+				<input type="radio" name="ex1" class="choice" value="2" />
+				<label>1</label><br />
+				<input type="radio" name="ex1" class="choice" value="3" />
+				<label>4</label><br />
+				<input type="radio" name="ex1" class="choice" value="4" />
+				<label>18</label><br />
+				<input type="button" class="submit" id="next" value="Next" onclick="nextpage()" />
+			</form>
+
+			<form class="quiz" action="">
+				<span>2. What is 8+8?</span><br />
+				<input type="radio" name="ex2" class="choice" value="1" />
+				<label> 66</label><br />
+				<input type="radio" name="ex2" class="choice" value="2" />
+				<label> 9</label><br />
+				<input type="radio" name="ex2" class="choice" value="3" />
+				<label> 16</label><br />
+				<input type="radio" name="ex2" class="choice" value="4" />
+				<label> 64</label><br />
+				<input type="button" class="submit" id="previous" value="Previous" onclick="previouspage()" />
+				<input type="button" class="submit" id="next" value="Next" onclick="nextpage()" />
+			</form>
+
+			<form class="quiz" action="">
+				<span>3. What are the primary colors?</span><br />
+				<input type="radio" name="ex3" class="choice" value="1" />
+				<label>Green, blue & yellow</label><br />
+				<input type="radio" name="ex3" class="choice" value="2" />
+				<label> Red, Blue & yellow</label><br />
+				<input type="radio" name="ex3" class="choice" value="3" />
+				<label>Red, Blue & white</label><br />
+				<input type="radio" name="ex3" class="choice" value="4" />
+				<label>White, black & yellow</label><br />
+				<input type="button" class="submit" id="previous" value="Previous" onclick="previouspage()" />
+				<input type="button" class="submit" id="next" value="Next" onclick="nextpage()" />
+			</form>
+
+			<form class="quiz" action="">
+				<span>4. What's the highest mountain in the world?</span><br />
+				<input type="radio" name="ex7" class="choice" value="1" />
+				<label> Sathram hills</label><br />
+				<input type="radio" name="ex7" class="choice" value="2" />
+				<label> Mount Kilimanjaro</label><br />
+				<input type="radio" name="ex7" class="choice" value="3" />
+				<label> K2 </label><br />
+				<input type="radio" name="ex7" class="choice" value="4" />
+				<label> Mount Everest</label><br />
+				<input type="button" class="submit" id="previous" value="Previous" onclick="previouspage()" />
+				<input type="button" class="submit" id="next" value="Next" onclick="nextpage()" />
+			</form>
+
+			<form class="quiz" action="">
+				<span>5. How many senses does humans have?</span><br />
+				<input type="radio" name="ex8" class="choice" value="true" />
+				<label>1</label><br />
+				<input type="radio" name="ex8" class="choice" value="false" />
+				<label>5</label><br />
+				<input type="button" class="submit" id="previous" value="Previous" onclick="previouspage()" />
+				<input type="button" class="submit" id="next" value="Next" onclick="nextpage()" />
+			</form>
+
+			<form class="quiz" action="">
+				<span>6. what is 90/100</span><br />
+				<input type="radio" name="ex5" class="choice" value="1" />
+				<label>0.09</label><br />
+				<input type="radio" name="ex5" class="choice" value="2" />
+				<label>9</label><br />
+				<input type="radio" name="ex5" class="choice" value="3" />
+				<label>0.9</label><br />
+				<input type="radio" name="ex5" class="choice" value="4" />
+				<label>0.009</label><br />
+				<input type="button" class="submit" id="previous" value="Previous" onclick="previouspage()" />
+				<input type="button" class="submit" id="next" value="Next" onclick="nextpage()" />
+			</form>
+		</div>
+		<div id="endpage">
+			<h1>Quiz complete</h1>
+		</div>
+		<script>
+			const correct_answers = ['4', '3', '2', '4', '2', '3'];
+
+			let q_n = 0;
+			let test = 0;
+
+			//last page of quiz
+			const lastpage = () => {
+				const answer = document.querySelectorAll('.choice');
+				for (let i = 0, j = -1; i < answer.length; i++) {
+					if (answer[i].checked) {
+						answer[i].checked = false;
+						j++;
+						if (correct_answers[j] === answer[i].value) {
+							test++;
+						}
+					}
+				}
+
+				const refreshPage = () => location.reload();
+				const questions = document.querySelectorAll('form');
+				questions[q_n].style.display = 'none';
+				const last_page = document.getElementById('endpage');
+				last_page.style.display = 'block';
+				let results = document.createElement('span');
+				results.classList.add('text');
+				last_page.appendChild(results);
+
+				if (test >= 3) {
+					results.innerText = 'You have passed the quiz \n SCORE ' + test + '/' + questions.length;
+				} else {
+					results.innerText =
+						'You have not passed the quiz better luck next time \n SCORE ' + test + '/' + questions.length;
+				}
+				let retry = document.createElement('input');
+				retry.type = 'button';
+				retry.value = 'Retry';
+				retry.classList.add('button');
+				retry.addEventListener('click', refreshPage);
+				last_page.appendChild(retry);
+			};
+
+			const quiz = () => {
+				//diplay first quiz
+				const start_page = document.getElementById('startpage');
+				start_page.style.display = 'none';
+				const questions = document.querySelectorAll('form');
+				questions[q_n].style.display = 'block';
+			};
+
+			//function to go back
+			const previouspage = () => {
+				const questions = document.querySelectorAll('form');
+				questions[q_n].style.display = 'none';
+				q_n--;
+				questions[q_n].style.display = 'block';
+			};
+
+			//function to go to text question
+			const nextpage = () => {
+				const questions = document.querySelectorAll('form');
+				if (q_n === questions.length - 1) {
+					const next = document.querySelectorAll('#next');
+					next[questions.length - 1].style.display = 'none';
+					const finish = document.createElement('input');
+					finish.type = 'button';
+					finish.value = 'Finish';
+					finish.classList.add('button');
+					finish.addEventListener('click', lastpage);
+					questions[questions.length - 1].appendChild(finish);
+				} else {
+					questions[q_n].style.display = 'none';
+					q_n++;
+					questions[q_n].style.display = 'block';
+				}
+			};
+		</script>
+	</body>
+</html>
